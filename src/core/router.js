@@ -1,4 +1,10 @@
 export default class Router { 
+
+    static routes = [];
+    static mode = null;
+    static root = '/';
+    static first = true;
+
     constructor() {
         this.routes = [];
         this.mode = null;

@@ -13,8 +13,8 @@ export default class NavigationComponent {
         ul.className = 'nav-ul';
         this.element.appendChild(ul);
 
-        this.create_nav_item(ul, { title: 'Home', route: ''});
-        this.create_nav_item(ul, { title: 'Contact', route: 'contact'});
+        this.create_nav_item(ul, { title: 'Home', route: '/'});
+        this.create_nav_item(ul, { title: 'Contact', route: '/contact'});
     }
     resize() {
         this.width = window.innerWidth;

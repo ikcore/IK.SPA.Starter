@@ -45,3 +45,12 @@ Router.add(/dashboard/, () => {
 
 console.log('App started');
 console.log(Api.get_base());
+
+window.onload = function () {
+    var path = window.location.pathname;
+    var redir = path;
+    if (window.location.search !== undefined) {
+        redir += window.location.search;
+    }
+    Router.navigate(redir);
+};
