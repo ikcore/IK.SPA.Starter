@@ -11,8 +11,10 @@ module.exports = {
   devServer: {
     port: 3300,
     historyApiFallback: {
-      index: 'index.html'
-    }
+      index: 'index.html',
+      isableDotRule: true
+    },
+    compress: true
   },
   module: {
     rules: [

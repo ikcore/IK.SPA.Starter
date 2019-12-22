@@ -58,8 +58,8 @@ export default class Api {
                     xhr.setRequestHeader(key, args.headers[key]);
                 });
             }
-            if (api.token !== undefined && api.token !== null) {
-                xhr.setRequestHeader('Authorization', 'Bearer ' + api.token);
+            if (this.token !== undefined && this.token !== null) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + this.token);
             }
             if (args.hasOwnProperty('download_progress')) {
                 xhr.onprogress = args.download_progress;
@@ -80,7 +80,7 @@ export default class Api {
             } else {
                 xhr.send(params);
             }
-        });
+        }.bind(this));
     }
     static validate_email (email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -1,12 +1,15 @@
 import Router from '../core/router'
+import Auth from '../core/auth'
 
 export default class NavigationComponent {
+
     constructor(el) {
         this.element = el;
         this.render();
         this.resize();
         window.addEventListener('resize', (() => {this.resize()}).bind(this), false);
     }
+
     render() {
         this.element.innerHTML = ``;
         let ul = document.createElement('ul');
@@ -16,9 +19,11 @@ export default class NavigationComponent {
         this.create_nav_item(ul, { title: 'Home', route: '/'});
         this.create_nav_item(ul, { title: 'Contact', route: '/contact'});
     }
+
     resize() {
         this.width = window.innerWidth;
     }
+
     create_nav_item (ul, args) {
         let li = document.createElement('li');
         ul.appendChild(li);
