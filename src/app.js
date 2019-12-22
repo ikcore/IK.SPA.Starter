@@ -2,6 +2,8 @@ import Router from './core/router'
 import Auth from './core/auth'
 import Api from './core/api'
 import NavigationComponent from './components/navigation_component'
+import RegisterView from './views/register_view'
+import LoginView from './views/login_view'
 
 import HomeView from './views/home_view'
 import ContactView from './views/contact_view'
@@ -26,6 +28,14 @@ Router.add(/dashboard/, () => {
 .add(/contact/, () => {
     console.log('contact');
     new ContactView(window.main);
+})
+.add(/register/, () => {
+    console.log('register');
+    new RegisterView(window.main);
+})
+.add(/login/, () => {
+    console.log('login');
+    new LoginView(window.main);
 })
 .add(function () {
     console.log('default');
