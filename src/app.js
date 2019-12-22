@@ -1,10 +1,10 @@
-import Router from './utils/router'
-import Auth from './utils/auth'
-import Api from './utils/api'
-import NavigationComponent from './components/navigation'
+import Router from './core/router'
+import Auth from './core/auth'
+import Api from './core/api'
+import NavigationComponent from './components/navigation_component'
 
-import HomeView from './views/home'
-import ContactView from './views/contact'
+import HomeView from './views/home_view'
+import ContactView from './views/contact_view'
 
 window.app = document.getElementById('app');
 window.header = document.createElement('div');

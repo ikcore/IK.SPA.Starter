@@ -1,4 +1,4 @@
-import Router from '../utils/router'
+import Router from '../core/router'
 
 export default class NavigationComponent {
     constructor(el) {

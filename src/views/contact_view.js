@@ -1,3 +1,5 @@
+import ContactService from '../services/contact_service'
+
 export default class ContactView {
     constructor(el) {
         this.element = el;
