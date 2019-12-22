@@ -2,7 +2,7 @@ import Api from './api'
 
 export default class Auth {
 
-    static localName = 'myc';
+    static localName = '';
 
     static login (bearer) {
         window.token = bearer;
@@ -18,8 +18,9 @@ export default class Auth {
         } catch (err) { console.warn('no local storage'); }
         Api.set_auth_token(null);
     };
-    static init () {        
+    static init (storeName) {        
         try {
+            this.localName = storeName;
             window.token = window.localStorage.getItem(this.localName);
         } catch (err) { console.warn('no local storage'); }
         if (this.check()) {
