@@ -1,0 +1,22 @@
+{
+  "name": "ik_web_starter",
+  "version": "1.0.0",
+  "description": "Ian Knowles SPA web-starter",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --output-public-path=/build/  --mode development --progress --open --hot",
+    "build": "webpack --mode production --progress"
+  },
+  "author": "IanKnowles.com",
+  "license": "None",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
